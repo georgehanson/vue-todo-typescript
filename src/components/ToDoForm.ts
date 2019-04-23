@@ -5,12 +5,12 @@ import WithRender from './to-do-form.html';
 @Component
 export default class ToDoForm extends Vue {
 
-	@Prop({ type: String, default: 'Add Task'}) readonly buttonText!: string
-	
-	public task: string = '';
+  @Prop({ type: String, default: 'Add Task'}) public readonly buttonText!: string;
 
-	public emitTask(): void {
-	  this.$emit('added', this.task);
-	  this.task = '';
-	}
+  public task: string = '';
+
+  public emitTask(): void {
+    this.$emit('added', this.task);
+    this.task = '';
+  }
 }
