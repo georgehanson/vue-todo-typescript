@@ -1,0 +1,7 @@
+<div>
+    <h1>My To-Do App!</h1>
+    <to-do-form @added="addTask" button-text="Create Task" />
+    <ul>
+        <li v-for="task in tasks"><input type="checkbox" :checked="task.completed"> {{ task.description }}</li>
+    </ul>
+</div>
